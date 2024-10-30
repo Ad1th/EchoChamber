@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>EchoChamber</title>
+</head>
+<body>
+    <header>
+        <h1>EchoChamber</h1>
+        <nav>
+            <button onclick="showPage('viewConfessions')">View Confessions</button>
+            <button onclick="showPage('submitConfession')">Post Confession</button>
+            <button onclick="showPage('viewPosts')">View Posts</button>
+            <button onclick="showPage('submitPost')">Post Article</button>
+            <button onclick="showPage('chatRoom')">Chat Room</button>
+        </nav>
+    </header>
+    <main>
+        <!-- View Confessions Section -->
+        <div id="viewConfessions" class="page hidden">
+            <h2>Latest Confessions</h2>
+            <div id="confessionList"></div>
+        </div>
+
+        <!-- Submit Confession Section -->
+        <div id="submitConfession" class="page hidden">
+            <h2>Share Your Confession</h2>
+            <textarea id="confessionInput" placeholder="Write your confession..."></textarea>
+            <button onclick="submitConfession()">Submit Confession</button>
+        </div>
+
+        <!-- View Posts Section -->
+        <div id="viewPosts" class="page hidden">
+            <h2>Latest Posts</h2>
+            <div id="postList"></div>
+        </div>
+
+        <!-- Submit Post Section -->
+        <div id="submitPost" class="page hidden">
+            <h2>Submit a Post</h2>
+            <input id="postTitle" type="text" placeholder="Post Title">
+            <textarea id="postContent" placeholder="Write your post..."></textarea>
+            <button onclick="submitPost()">Submit Post</button>
+        </div>
+
+        <!-- Chat Room Section -->
+        <div id="chatRoom" class="page hidden">
+            <h2>Anonymous Chat Room</h2>
+            <div id="chatList"></div>
+            <textarea id="chatInput" placeholder="Type your message..."></textarea>
+            <button onclick="sendMessage()">Send Message</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
